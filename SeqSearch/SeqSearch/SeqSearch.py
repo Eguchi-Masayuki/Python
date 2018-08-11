@@ -1,0 +1,21 @@
+try:
+    file = open('num_input.txt')#num_input.txtを開く
+except:
+    print("ファイルが見つかりません。")#ファイルが見つからないときの例外処理
+else:
+    line=[]
+    line=file.readline().split(",")#カンマ区切りの数値をリストに代入する。
+    file.close
+    print("探索リスト:"+str(line))#リストの中身を表示
+    long=len(line)
+    print("要素数は"+str(long)+"です。")#リストの要素数を表示
+    print("探す値:",end="")
+    try:
+        num=int(input())#キー値の指定
+    except:
+        print("整数を入力してください。")#数字以外が入力されたときの例外処理
+    else:
+        try:
+            print("探す値はリストの"+str(line.index(str(num))+1)+"番目にあります。")
+        except:
+            print("探索失敗")#line.index(str(num))でValueErrorが出たら探索失敗
