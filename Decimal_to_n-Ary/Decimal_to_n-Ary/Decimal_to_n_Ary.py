@@ -13,19 +13,19 @@ def main():
                 print("2以上36以下の数を入力してください。\n")
                 main()
             else:
-                ##リストを逆順にソート
+                #リストを逆順にソート
                 ans=cardConvR(num,log)[::-1]
                 for i in ans:
                     print(i,end="")
                 print("です。")
                 Retry()
 
-    ##例外処理
+    #例外処理
     except:
         print("非負の整数を入力してください。\n")
         main()
 
-##n進数に変換
+#n進数に変換
 def cardConvR(x,r):
     dchar="0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
     a=[]
@@ -34,7 +34,7 @@ def cardConvR(x,r):
         x=x//r
     return a
 
-##繰り返し確認
+#繰り返し確認
 def Retry():
     print("もう一度しますか(1…はい/0…いいえ):",end="")
     try:
@@ -47,10 +47,10 @@ def Retry():
             print("0または1を入力してください。") 
             Retry()
 
-    ##例外処理
+    #例外処理
     except:
         print("0または1を入力してください。")
         Retry()
 
-##実行部分
+#実行部分
 main()
