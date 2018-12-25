@@ -1,4 +1,4 @@
-##二進数に変換
+#二進数に変換
 def cardConvR(x):
     a=[]
     while x!=0:
@@ -16,16 +16,16 @@ def main():
             main()
         else:
             print("2進数では",end="")
-            ##リストを逆順にソート
+            #リストを逆順にソート
             ans=cardConvR(num)[::-1]
             for i in ans:
                 print(i,end="")
             print("です。")
 
-    ##例外処理
+    #例外処理
     except:
         print("非負の整数を入力してください。\n")
         main()
 
-##実行部分
+#実行部分
 main()
